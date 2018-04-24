@@ -1,0 +1,9 @@
+# php-010-sofn-dp-dompdf
+
+# Anotações:
+- Fonte:
+    https://www.schoolofnet.com/canal-direto-ao-ponto/pdf-com-php/
+- Instalação.
+    composer require dompdf/dompdf
+- Rodar.
+    php -S localhost:1337 -t generate.php
