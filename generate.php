@@ -2,16 +2,19 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+$result = require('doc.php');
+
 $dompdf = new Dompdf\Dompdf;
 
-$dompdf->loadhtml('Hello World');
+$dompdf->loadhtml($result);
 
 $dompdf->setPaper('A4', 'landscape');
 
 $dompdf->render();
 
-$dompdf->stream();
+// $dompdf->stream();
 
-// $pdf = $dompdf->output();
+$pdf = $dompdf->output();
 
-// file_put_contents('doc.pdf', $pdf);
+file_put_contents('doc.pdf', $pdf);
+file_put_contents('doc.html', $result);
