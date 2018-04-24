@@ -1,5 +1,6 @@
 <?php
 
+// Dados.
 $users = [
     [
         'name' => 'Éderson',
@@ -11,6 +12,7 @@ $users = [
     ],
 ];
 
+// Preparação.
 $html = '';
 foreach ($users as $user) {
     $html .= '<li>' . $user['name'] . ' - ' . $user['email'] . '</li>';
