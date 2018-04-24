@@ -4,7 +4,11 @@ require __DIR__ . '/vendor/autoload.php';
 
 $result = require('doc.php');
 
-$dompdf = new Dompdf\Dompdf;
+$options = new Dompdf\Options;
+
+$options->set('defaultFont', 'Courier');
+
+$dompdf = new Dompdf\Dompdf($options);
 
 $dompdf->loadhtml($result);
 
